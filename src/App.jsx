@@ -5,6 +5,7 @@ import authService from './Appwrite/Auth'
 import { Header, Footer, Logo } from './Components'
 import { Outlet } from "react-router-dom"
 import ScrollToTop from "./ScrollToTop"
+import Particle from "./Components/Particals/Partical"
 
 
 function App() {
@@ -15,11 +16,9 @@ function App() {
   useEffect(() => {
     authService.getCurrentUser()
       .then((userData) => {
-        console.log('HELLO USER , You are logged in !')
         if (userData) {
           dispatch(login(userData))
         } else {
-          console.log('Calling logout()')
           dispatch(logout())
         }
       })
@@ -33,16 +32,16 @@ function App() {
   return loading ?
 
     (<div className='flex justify-center pt-36 h-screen bg-[url("./Pages/bgImg/background-desktop-2500w.jpg")] bg-cover'> {/* The problem is ("") and ('')*/}
-      <Logo className='w-[15rem]'/>
+      <Logo className='w-[15rem]' />
     </div>) :
 
     (
-      <div className="w-full min-h-screen text-center bg-[#bbbab8]">
-        <ScrollToTop/>
-        <Header/>
-        <Outlet/>
-        <Footer/>
-      </div>
+        <div className="w-full min-h-screen text-center bg-[#bbbab8]">
+          <ScrollToTop />
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
     )
 
 }
