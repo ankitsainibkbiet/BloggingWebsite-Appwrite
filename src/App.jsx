@@ -5,7 +5,6 @@ import authService from './Appwrite/Auth'
 import { Header, Footer, Logo } from './Components'
 import { Outlet } from "react-router-dom"
 import ScrollToTop from "./ScrollToTop"
-import Particle from "./Components/Particals/Partical"
 
 
 function App() {
