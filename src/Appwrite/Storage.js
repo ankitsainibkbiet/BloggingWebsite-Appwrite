@@ -1,5 +1,5 @@
 import { Client, Storage, ID } from "appwrite";
-import config from '../Config/config'
+import config from '../Config/config.js'
 
 export class custumStorage{
     client = new Client();

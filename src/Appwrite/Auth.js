@@ -1,5 +1,5 @@
 import { Client, Account, ID } from "appwrite";
-import config from '../Config/config'
+import config from '../Config/config.js'
 
 // we make class because it make us easy to access methods by object of the class and we can also make as free from vendor lock-in problem 
 
